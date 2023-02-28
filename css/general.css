@@ -70,15 +70,8 @@ Default: 9px
 }
 
 html {
-  /* default font-size is 16px */
-  /* font-size: 10px; which is easy for calculation using rem*/
-  /* 10px / 16px = 0.625 = 62.5% */
-  /* so to respect user's browser font-size setting we use a percentage */
   font-size: 62.5%;
   overflow-x: hidden;
-
-  /* Does not work on Safari */
-  /* scroll-behavior: smooth; */
 }
 
 body {
@@ -86,8 +79,6 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
-
-  /* Only works if there is nothing absolutely positioned in relation to body */
   overflow-x: hidden;  
 }
 
@@ -123,10 +114,6 @@ body {
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
 }
-
-/* .grid--5-cols {
-  grid-template-columns: repeat(5, 1fr);
-} */
 
 .grid--center-v {
   align-items: center;
@@ -177,15 +164,9 @@ body {
   font-weight: 600;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
-
-  /* Only for .btn */
   border: none;
   cursor: pointer;
   font-family: inherit;
-
-  /* animation of button color at hover */
-  /* place on original 'state' */
-  /* transition: background-color 0.3s; */
   transition: all 0.3s;
 }
 
@@ -209,9 +190,7 @@ body {
 .btn--outline:hover,
 .btn--outline:active {
   background-color: #fdf2e9;
-  /* Trick to add border inside button */
   box-shadow: inset 0 0 0 3px #fff;
-  /* border: 1px solid #fff; */
 }
 
 .btn--form {
@@ -265,9 +244,6 @@ body {
 
 *:focus {
   outline: none;
-  /* outline: 4px dotted #e67e22;
-  outline-offset: 8px; */
-  /* Trick to add border inside */
   box-shadow: 0 0 0 0.8rem rgb(230, 126, 34, 0.5);
 }
 

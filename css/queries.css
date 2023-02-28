@@ -1,7 +1,3 @@
-/* rem and em do NOT depend on HTML font-size in media queries! 
-Instead, 1rem = 1em = 16px 
-In media queries there are some bugs for rem, so we use em. */
-
 /* *********************** */
 /* BELOW 1344px (Smaller desktops) */
 /* *********************** */
@@ -26,7 +22,6 @@ In media queries there are some bugs for rem, so we use em. */
 
 @media (max-width: 75em) {
   html {
-    /* 9px / 16px = 56.25% */
     font-size: 56.25%;
   }
 
@@ -66,7 +61,6 @@ In media queries there are some bugs for rem, so we use em. */
 
 @media (max-width: 59em) {
   html {
-    /* 8px / 16px = 50% */
     font-size: 50%;
   }
 
@@ -143,14 +137,8 @@ In media queries there are some bugs for rem, so we use em. */
     align-items: center;
     justify-content: center;
     transition: all 0.5s ease-in;
-
-    /* Hide navigation */
-    /* display: none; --> Allows no transitions at all */
-    /* 1) hide element visually */
     opacity: 0;
-    /* 2) make it unaccessible to mouse and keyboard */
     pointer-events: none;
-    /* 3) hide it from screen readers */
     visibility: hidden;
   }
 
